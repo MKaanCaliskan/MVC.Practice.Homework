@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["title"] = "Müşteri Yönetim Paneli";
+    Layout = "_AdminLayout";
+}
+@model CustomersAddDto
+<div class="row">
+   <div class="col-5">
+         <form asp-action="CreateCustomer" method="post">
+         @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+         
+         <div class="form-group">
+            <label for="Name">Şirket Adı</label>
+            <input type="text" id="Name" class="form-control" asp-for="Name" />
+             <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Price">Kişi Adı</label>
+            <input type="text" id="ContactName" class="form-control" asp-for="ContactName" />
+        </div>
+        <div class="form-group">
+            <label for="Stock">Ülke</label>
+            <input type="text" id="Country" class="form-control" asp-for="Country" />
+        </div>
+        <div class="form-group">
+            <label for="Stock">Şehir</label>
+            <input type="text" id="City" class="form-control" asp-for="City" />
+        </div>
+         <div class="form-group">
+            <label for="Stock">Telefon</label>
+            <input type="text" id="Phone" class="form-control" asp-for="Phone" />
+        </div>
+        <button class="btn btn-primary float-end mt-3 w-25" type="submit">Kaydet</button>
+        </form>
+    </div>
+    <div class="col-7">
+        @await Component.InvokeAsync("Customer")
+    </div>
+
+</div>
+
+  
+

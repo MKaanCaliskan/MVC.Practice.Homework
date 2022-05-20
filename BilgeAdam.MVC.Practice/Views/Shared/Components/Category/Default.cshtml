@@ -1,0 +1,16 @@
+﻿
+@model List<Category>
+
+<div>
+    <ul class="category">
+        @foreach (var category in @Model)
+        {
+            <li class="li"><a class="link" href="@Url.Action("Index", "Home", @category)">@category.CategoryName</a></li>
+        }
+    </ul>
+
+</div>
+
+@section Styles{
+<Link rel="stylesheet" href="~/css/CategorySideBar.css" />
+}

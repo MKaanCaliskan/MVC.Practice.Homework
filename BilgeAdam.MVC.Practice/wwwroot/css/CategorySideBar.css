@@ -1,0 +1,15 @@
+.category {
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+.li {
+    color : black;
+
+    list-style-type: none;
+}
+.link {
+    text-decoration :none;
+}

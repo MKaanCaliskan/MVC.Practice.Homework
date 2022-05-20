@@ -1,0 +1,29 @@
+﻿@model List<Customer>
+
+
+<div class="row">
+       <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Şirket Adı</th>
+                        <th>Kişi Adı</th>
+                        <th>Ülke</th>
+                        <th>Şehir</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var p in @Model)
+                    {
+                        <tr>
+                            <td>@p.CompanyName</td>
+                            <td>@p.ContactName</td>
+                            <td>@p.Country</td>
+                            <td>@p.City</td>
+                            <td><a href="/Admin/DeleteCustomer/@p.CustomerID" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></a></td>
+
+                        </tr>
+                    }
+                </tbody>
+       </table>   
+</div>
